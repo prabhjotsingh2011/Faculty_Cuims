@@ -12,6 +12,8 @@ import Organized from './screens/OrganizedScreen/Organized';
 import PersonalDetails from './screens/PersonalDetails/PersonalDetails';
 import Industry_Connections from './screens/Industry_connections/Industry_Connections';
 import NotFound from './screens/404/NotFound';
+import NavigationState from './contexts/Navigation/NavigationState';
+
 
 
 
@@ -33,12 +35,12 @@ export const Layout = ({ children }) => {
 
         <div className="app__container flex relative">
           {
-            
-               <Sidebar
-                toggleSideBar={toggleSideBar}
-                setToggleSideBar={setToggleSideBar}
-              />
-               
+
+            <Sidebar
+              toggleSideBar={toggleSideBar}
+              setToggleSideBar={setToggleSideBar}
+            />
+
           }
 
 
@@ -56,56 +58,57 @@ function App() {
 
   return (
     <>
-      <Switch>
-        <Route exact path='/'>
-          <Layout >
-            <HomeScreen />
-          </Layout>
-        </Route>
+      <NavigationState>
+        <Switch>
+          <Route exact path='/'>
+            <Layout >
+              <HomeScreen />
+            </Layout>
+          </Route>
 
-        <Route exact path='/ExamResult'>
-          <Layout >
-            <Exam_Result_anaysis />
-          </Layout>
-        </Route>
+          <Route exact path='/ExamResult'>
+            <Layout >
+              <Exam_Result_anaysis />
+            </Layout>
+          </Route>
 
-        <Route exact path='/mentoring'>
-          <Layout >
-            <Mentoring />
-          </Layout>
-        </Route>
+          <Route exact path='/mentoring'>
+            <Layout >
+              <Mentoring />
+            </Layout>
+          </Route>
 
-        <Route exact path='/certification'>
-          <Layout >
-            <Certifications />
-          </Layout>
-        </Route>
+          <Route exact path='/certification'>
+            <Layout >
+              <Certifications />
+            </Layout>
+          </Route>
 
-        <Route exact path='/Organized'>
-          <Layout >
-            <Organized />
-          </Layout>
-        </Route>
+          <Route exact path='/Organized'>
+            <Layout >
+              <Organized />
+            </Layout>
+          </Route>
 
-        <Route exact path='/Personal-details'>
-          <Layout >
-            <PersonalDetails/>
-          </Layout>
-        </Route>
-        <Route exact path='/Industry-connections'>
-          <Layout >
-            <Industry_Connections/>
-          </Layout>
-        </Route>
-        <Route >
-          <Layout >
-            <NotFound/>
-          </Layout>
-        </Route>
+          <Route exact path='/Personal-details'>
+            <Layout >
+              <PersonalDetails />
+            </Layout>
+          </Route>
+          <Route exact path='/Industry-connections'>
+            <Layout >
+              <Industry_Connections />
+            </Layout>
+          </Route>
+          <Route >
+            <Layout >
+              <NotFound />
+            </Layout>
+          </Route>
 
-        
-      </Switch>
 
+        </Switch>
+      </NavigationState>
     </>
   );
 }

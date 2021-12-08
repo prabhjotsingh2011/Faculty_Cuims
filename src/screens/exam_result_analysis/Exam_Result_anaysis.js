@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useState,useEffect,useContext } from 'react'
+import Details from '../../components/Exam_result_analysis/Details/Details'
+import ResultTable from '../../components/Exam_result_analysis/ResultTable/ResultTable'
+import Stats from '../../components/Exam_result_analysis/Stats/Stats'
+import NavigationContext from '../../contexts/Navigation/NavigationContext'
 import './Exam_Result_anaysis.scss'
 
+
+
 const Exam_Result_anaysis = () => {
-    return (
-        <div class="flex flex-col  my-auto items-center bgimg bg-cover">
-        <button class="mt-2 ml-72  h-14 text-5xl bg-white text-black font-bold py-8 px-20 rounded m-2">
-        Exam_Result_anaysis page
-        </button>
-      </div>
-    )
+
+ 
+  return (
+    <div className='z-0'>
+      <Details/>
+      <Stats/>
+      <ResultTable/>
+
+    </div>
+  )
 }
 
 export default Exam_Result_anaysis

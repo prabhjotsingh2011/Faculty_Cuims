@@ -99,10 +99,11 @@ const All_Items = [
     },
     {
         text: 'examination result analysis',
-        subItems: [
-            'Theory',
-            'Practical',
-        ]
+        route:'/ExamResult'
+        // subItems: [
+        //     'Theory',
+        //     'Practical',
+        // ]
     },
     {
         text: 'Administrative responsibilites',
