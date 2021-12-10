@@ -120,11 +120,12 @@ const All_Items = [
     },
     {
         text: 'Feedback',
-        subItems: [
-            'Batch Heads',
-            'Academic coordinators',
-            'Student Feedback',
-        ]
+        route:'./feedback',
+        // subItems: [
+        //     'Batch Heads',
+        //     'Academic coordinators',
+        //     'Student Feedback',
+        // ]
     },
 
     {

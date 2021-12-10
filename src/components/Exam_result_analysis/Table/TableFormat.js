@@ -1,32 +1,42 @@
 import React from 'react'
 
-const TableFormat = ({ TheoryResult ,theory}) => {
+const TableFormat = ({ TheoryResult, theory }) => {
+
     return (
 
         <div class="  flex flex-rol">
             <div class=" h-screen  mx-24  shadow-inner relative ">
-            <span className='absolute text-5xl -top-24 -left-28'>{theory} </span>
+                <span className='absolute text-5xl -top-24 -left-28'>{theory} </span>
                 <div class=" shadow-xl ">
                     <table className='border-t-4 border-l-4 border-gray-200 rounded-lg'>
                         <thead class="bg-gray-300">
-                            <tr>
-                                <th class="px-6 py-2 text-xl text-black-500">
-                                    ID
-                                </th>
-                                <th class="px-6 py-2 text-xl text-black-600">
-                                    Name
-                                </th>
-                                <th class="px-6 py-2 text-xl text-black-600">
-                                    Subject
-                                </th>
-                                <th class="px-6 py-2 text-xl text-black-600">
-                                    Marks
-                                </th>
-                                <th class="px-6 py-2 text-xl text-black-600">
-                                    Credits
-                                </th>
 
+
+                            <tr>
+                                {/* { */}
+                                    {/* TheoryResult[0].map(item => ( */}
+
+                                        <th class="px-6 py-2 text-xl text-black-500">
+                                            {/* {item} */}
+                                            ID
+                                        </th>
+                                    {/* )) */}
+                                     <th class="px-6 py-2 text-xl text-black-600">
+                                        Name
+                                    </th>
+                                    <th class="px-6 py-2 text-xl text-black-600">
+                                        Subject
+                                    </th>
+                                    <th class="px-6 py-2 text-xl text-black-600">
+                                        Marks
+                                    </th>
+    
+                                    <th class="px-6 py-2 text-xl text-black-600">
+                                        Credits
+                                    </th> 
+                                {/* } */}
                             </tr>
+                        
                         </thead>
                         {
                             TheoryResult.map((record) => (

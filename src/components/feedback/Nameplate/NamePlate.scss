@@ -1,0 +1,36 @@
+
+.title {
+    width: 267px;
+    height: 67.5px;
+    margin: 38px 628px 20px 41px;
+
+    
+    &__name {
+        width: 267px;
+        height: 47px;
+        margin: 0 0 -12.5px;
+        font-family: Raleway;
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.6;
+        letter-spacing: normal;
+        text-align: left;
+        color: #11141a;
+    }
+    &__designation{
+        width: 225px;
+        height: 15px;
+        margin: 1px 41px 0 1px;
+        font-family: Lato;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #7f8fa4;
+    }
+}

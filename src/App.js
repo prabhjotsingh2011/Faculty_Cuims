@@ -13,6 +13,10 @@ import PersonalDetails from './screens/PersonalDetails/PersonalDetails';
 import Industry_Connections from './screens/Industry_connections/Industry_Connections';
 import NotFound from './screens/404/NotFound';
 import NavigationState from './contexts/Navigation/NavigationState';
+import Feedback from './screens/feedback/Feedback';
+import StudentFeedback from './screens/feedback/studentFeedback/StudentFeedback';
+import CoordinatorFeedback from './screens/feedback/cordinator feedback/CoordinatorFeedback';
+import HeadFeedback from './screens/feedback/head-feedback/HeadFeedback';
 
 
 
@@ -95,11 +99,40 @@ function App() {
               <PersonalDetails />
             </Layout>
           </Route>
+
           <Route exact path='/Industry-connections'>
             <Layout >
               <Industry_Connections />
             </Layout>
           </Route>
+          
+          <Route exact path='/feedback'>
+            <Layout >
+              <Feedback />
+            </Layout>
+          </Route>
+          
+          <Route exact path='/feedback/students'>
+            <Layout >
+            
+              <StudentFeedback />
+            </Layout>
+          </Route>
+          
+          <Route exact path='/feedback/cordinators'>
+            <Layout >
+              <CoordinatorFeedback />
+            </Layout>
+          </Route>
+          
+          <Route exact path='/feedback/head'>
+            <Layout >
+              <HeadFeedback />
+            </Layout>
+          </Route>
+
+
+
           <Route >
             <Layout >
               <NotFound />
