@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router'
 
 
-const Item = ({ curr_item }) => {
+const Item = ({ curr_item,setToggleSideBar }) => {
     const sublist_is_present_or_not = curr_item.subItems ? true : false;
     const routeLink = curr_item.route ? true : false
     const sub_sublist_is_present_or_not = typeof (curr_item.subItems) === 'object' ? true : false
@@ -16,20 +16,25 @@ const Item = ({ curr_item }) => {
     const history = useHistory();
 
     const handleClickOnItem = () => {
-        setToggleHide(!toggleHide);
-        // if(!sublist_is_present_or_not) history.push('/mentoring')
-        // if(!sublist_is_present_or_not) history.push(`${curr_item.route?curr_item.route:''}`)
-        // history.push('/mentoring')
+        if(curr_item.subItems) {
+            setToggleHide(!toggleHide)
+            return
+        }
+        else {
+            setToggleSideBar(false);
+            
+        }
+        
     }
     useEffect(() => {
 
-    }, [toggleHide])
+    }, [setToggleSideBar])
 
 
     return (
         <>
             <ul>
-                <li onClick={handleClickOnItem}>
+                <li onClick={handleClickOnItem} >
 
                     {
                         routeLink
@@ -68,10 +73,15 @@ const Item = ({ curr_item }) => {
             </ul>
 
             {
-                sublist_is_present_or_not
+                //sublist_is_present_or_not
+                curr_item.subItems
                     ?
-                    curr_item?.subItems.map((current_sublist) => (
-                        <SubItems subItems={current_sublist} toggleHide={toggleHide} />
+                    curr_item.subItems.map((current_sublist) => (
+                        <SubItems 
+                        subItems={current_sublist} 
+                        toggleHide={toggleHide}
+                        setToggleSideBar={setToggleSideBar}
+                     />
 
                     ))
                     : ''

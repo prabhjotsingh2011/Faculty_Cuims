@@ -5,11 +5,11 @@ const All_Items = [
     },
     {
         text: 'Certifications',
-        route:'/certification'
-        // subItems: [
-        //     'National',
-        //     'International'
-        // ]
+        route:'/certification',
+        subItems: [
+            'National',
+            'International'
+        ]
     },
     {
         text: 'Personal Details',
@@ -71,24 +71,24 @@ const All_Items = [
     },
     {
         text: 'experience ',
-        subItems: [
-            'Industry',
-            'Academia',
-            'Others'
-        ]
+        // subItems: [
+        //     'Industry',
+        //     'Academia',
+        //     'Others'
+        // ]
     },
     {
         text: 'educational Qualification ',
-        subItems: [
-            'UG',
-            'PG',
-            'Ph.D.',
-            'Post Doctoral'
-        ]
+        // subItems: [
+        //     'UG',
+        //     'PG',
+        //     'Ph.D.',
+        //     'Post Doctoral'
+        // ]
     },
     {
         text: 'Programming Language Proficiency ',
-        route:'/Programming-Language-Proficiency'
+        route:'/Programming-Language-Proficiency',
         // subItems: [
         //     'C',
         //     'C++',
@@ -99,7 +99,7 @@ const All_Items = [
     },
     {
         text: 'examination result analysis',
-        route:'/ExamResult'
+        route:'/ExamResult',
         // subItems: [
         //     'Theory',
         //     'Practical',
@@ -107,16 +107,17 @@ const All_Items = [
     },
     {
         text: 'Administrative responsibilites',
-        subItems: [
-            // {
-            //     text: 'mentoring',
-            //     subItems: ['achievement']
-            // },
-            'mentoring',
-            'MOOC',
-            'Projects Guided',
-            'PHD/ M.TECH Guided'
-        ]    
+        route:'/admin'
+        // subItems: [
+        //     // {
+        //     //     text: 'mentoring',
+        //     //     subItems: ['achievement']
+        //     // },
+        //     'mentoring',
+        //     'MOOC',
+        //     'Projects Guided',
+        //     'PHD/ M.TECH Guided'
+        // ]    
     },
     {
         text: 'Feedback',

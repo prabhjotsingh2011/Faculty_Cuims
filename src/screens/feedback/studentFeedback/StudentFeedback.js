@@ -34,7 +34,28 @@ const StudentFeedback = () => {
                     <GeneralGraph data={data} type='Line' />
                 </div>
             </div>
-            <TableFormat TheoryResult={TheoryResult}  />
+
+            <div className='mx-16 my-24' >
+                <span className='font-bold text-2xl' >Class:</span>
+                <span className='text-xl mx-4 '>ON-20BCS708</span><br />
+                <span className='font-bold text-2xl' >Section:</span>
+                <span className='text-xl mx-4 '>A</span>
+                <TableFormat TheoryResult={TheoryResult} />
+            </div>
+            <div className='mx-16 my-24' >
+                <span className='font-bold text-2xl' >Class:</span>
+                <span className='text-xl mx-4 '>ON-20BCS602</span><br />
+                <span className='font-bold text-2xl' >Section:</span>
+                <span className='text-xl mx-4 '>B</span>
+                <TableFormat TheoryResult={TheoryResult} />
+            </div>
+            <div className='mx-16 my-24' >
+                <span className='font-bold text-2xl' >Class:</span>
+                <span className='text-xl mx-4 '>ON-20BCS582</span><br />
+                <span className='font-bold text-2xl' >Section:</span>
+                <span className='text-xl mx-4 '>D</span>
+                <TableFormat TheoryResult={TheoryResult} />
+            </div>
         </div>
     )
 }

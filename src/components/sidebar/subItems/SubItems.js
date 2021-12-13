@@ -20,6 +20,7 @@ const SubItems = (prop) => {
 
     const handleClickOnItem=()=>{
         setToggleHideSubItems(!toggleHideSubItems);
+        prop.setToggleSideBar(false)
         if(!item_is_object) {
             var newString_without_spaces = prop.subItems.replace(" ", "_");
             history.push(`/${newString_without_spaces}`)
@@ -35,7 +36,7 @@ const SubItems = (prop) => {
         <>
             <ul className={`ml-4 ${prop.toggleHide?'show_subItems':'sub_items'}`}  >
                 <li onClick={handleClickOnItem}>
-                    <div className="item flex border-b-2 border-black my-1 px-3 py-1 cursor-pointer w-full justify-between bg-red-200"  >
+                    <div className="item flex border-b-2 border-black my-1 px-3 py-1 cursor-pointer w-full justify-between bg-gray-200"  >
 
                         <div >
                             {

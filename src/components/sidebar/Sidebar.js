@@ -23,7 +23,7 @@ const Sidebar = ({
 
     return (
         <div className="absolute ">
-            <div className={`sidebar h-screen fixed top-0 z-10  w-72 bg-gray-200 ${toggleSideBar ? 'show' : 'hide'}`}>
+            <div className={`sidebar h-screen fixed top-0 z-10  w-72 bg-white ${toggleSideBar ? 'show' : 'hide'}`}>
 
                 <WiDirectionLeft size={30} className='mt-2 ml-2' onClick={closeSideBar} />
                 <div className="sidebar_logo my-2">
@@ -33,7 +33,7 @@ const Sidebar = ({
                 <div className="categories">
                     {
                         All_Items?.map((curr_item) => (
-                            <Item curr_item={curr_item} />
+                            <Item curr_item={curr_item} setToggleSideBar={setToggleSideBar} />
                         ))
                     }
 

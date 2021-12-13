@@ -6,7 +6,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import { Route, Redirect, useHistory, Switch } from 'react-router'
 import HomeScreen from './screens/HomeScreen/HomeScreen';
 import Exam_Result_anaysis from './screens/exam_result_analysis/Exam_Result_anaysis';
-import Mentoring from './screens/mentoringScreen/Mentoring';
+import Mentoring from './screens/adminstrative_responsibilities/mentoringScreen/Mentoring';
 import Certifications from './screens/certifications/Certifications';
 import Organized from './screens/OrganizedScreen/Organized';
 import PersonalDetails from './screens/PersonalDetails/PersonalDetails';
@@ -17,6 +17,10 @@ import Feedback from './screens/feedback/Feedback';
 import StudentFeedback from './screens/feedback/studentFeedback/StudentFeedback';
 import CoordinatorFeedback from './screens/feedback/cordinator feedback/CoordinatorFeedback';
 import HeadFeedback from './screens/feedback/head-feedback/HeadFeedback';
+import AdminResposibilty from './screens/adminstrative_responsibilities/AdminResposibilty';
+import MOOC from './screens/adminstrative_responsibilities/Mooc/MOOC';
+import Guided from './screens/adminstrative_responsibilities/Guided/Guided';
+import Contribution from './screens/contribution/Contribution';
 
 
 
@@ -48,9 +52,9 @@ export const Layout = ({ children }) => {
           }
 
 
-          <div fluid className="app__main ">
+          {/* <div fluid className="app__main "> */}
             {children}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </>
@@ -76,12 +80,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route exact path='/mentoring'>
-            <Layout >
-              <Mentoring />
-            </Layout>
-          </Route>
-
+        
           <Route exact path='/certification'>
             <Layout >
               <Certifications />
@@ -128,6 +127,39 @@ function App() {
           <Route exact path='/feedback/head'>
             <Layout >
               <HeadFeedback />
+            </Layout>
+          </Route>
+
+          <Route exact path='/admin'>
+            <Layout >
+              <AdminResposibilty />
+            </Layout>
+          </Route>
+
+          <Route exact path='/mentoring'>
+            <Layout >
+              <Mentoring />
+            </Layout>
+          </Route>
+
+
+          <Route exact path='/mooc'>
+            <Layout >
+              <MOOC />
+            </Layout>
+          </Route>
+
+
+          <Route exact path='/guided'>
+            <Layout >
+              <Guided />
+            </Layout>
+          </Route>
+
+
+          <Route exact path='/contribution'>
+            <Layout >
+              <Contribution />
             </Layout>
           </Route>
 

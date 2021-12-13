@@ -16,9 +16,6 @@ const Header = ({ toggleSideBar, setToggleSideBar }) => {
 
     const showSidebar = () => {
         setToggleSideBar(!toggleSideBar)
-        console.log('====================================');
-        console.log(toggleSideBar);
-        console.log('====================================');
     }
 
     // useEffect(() => {

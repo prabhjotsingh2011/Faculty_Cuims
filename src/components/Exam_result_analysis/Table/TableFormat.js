@@ -4,11 +4,11 @@ const TableFormat = ({ TheoryResult, theory }) => {
 
     return (
 
-        <div class="  flex flex-rol">
-            <div class=" h-screen  mx-24  shadow-inner relative ">
-                <span className='absolute text-5xl -top-24 -left-28'>{theory} </span>
-                <div class=" shadow-xl ">
-                    <table className='border-t-4 border-l-4 border-gray-200 rounded-lg'>
+        // <div class="  flex flex-rol w-full">
+        //     <div class=" h-screen  mx-24  shadow-inner relative ">
+        //         <span className='absolute text-5xl -top-24 -left-28'>{theory} </span>
+        //         <div class=" shadow-xl ">
+                    <table className='border-t-4 border-l-4 border-gray-200 rounded-lg bg-white w-full table-auto'>
                         <thead class="bg-gray-300">
 
 
@@ -41,7 +41,7 @@ const TableFormat = ({ TheoryResult, theory }) => {
                         {
                             TheoryResult.map((record) => (
                                 <tbody class="bg-white">
-                                    <tr class="whitespace-nowrap">
+                                    <tr class="whitespace-nowrap text-center ">
                                         <td class="px-6 py-4 text-l text-gray-600">
                                             {record.id}
                                         </td>
@@ -70,9 +70,9 @@ const TableFormat = ({ TheoryResult, theory }) => {
                         }
 
                     </table>
-                </div>
-            </div>
-        </div>
+        //         </div>
+        //     </div>
+        // </div>
     )
 }
 
